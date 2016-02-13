@@ -6,17 +6,29 @@
 
 int main()
 {
-	pid_t pid;
-	int f;
-	f = fork();
-	pid = getpid();
-	
-	//char* input = NULL;
-	//char* sgl_str = NULL;
-	//scanf("%s", input);
-	//sgl_str = strtok(input," ");
-	
-	
+	char* input = malloc(sizeof(char)*256);
+	char* sgl_str = malloc(sizeof(char)*256);
+	fgets(input, 256, stdin);
+	char* array[256];
+
+	int i = 0;	
+	sgl_str = strtok(input," ");
+
+	while(sgl_str != NULL)
+	{
+		array[i] = sgl_str;
+		sgl_str = strtok(NULL," ");
+		i++;
+	}
+	//test
+	int j = 0;
+	for(j = 0;  j < i; j++)
+	{
+		printf("%s\n",array[j]);
+		fflush(stdout);
+	}
+	//end test
+/*
 	if(f != 0)
 	{
 		wait(NULL);
@@ -33,5 +45,6 @@ int main()
 		kill(pid,SIGKILL);
 	}
 	printf(":D\n");
+*/
 	return 0;
 }
