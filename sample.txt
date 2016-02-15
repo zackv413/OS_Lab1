@@ -1,0 +1,34 @@
+
+process_termination.c
+------------------------------------------
+[zack@zack lab01]$ ./test &
+[1] 1293
+
+[zack@zack src]$ ./process_termination 
+Please enter a process id: 1293
+Successfully killed process: 1293
+[zack@zack src]$ ./process_termination 
+Please enter a process id: 1000002
+Unable to find the specefied pID
+[zack@zack src]$ ./process_termination 
+Please enter a process id: 1
+You do not have permission to kill this pID
+
+process_creation.c
+--------------------------------------------
+[zack@zack src]$ ./process_creation 
+Grandchild process with process id 1333 has completed
+Child process with process ID 1332 has completed
+Parent process with process ID 1331 has completed
+[zack@zack src]$ 
+
+
+batch_scheduler.c
+---------------------------------------------
+[zack@zack src]$ ./batch_scheduler
+batch-shell> ls pwd uname batch_scheduler
+ls.c		     process_creation.c   process_termination.c batch_scheduler.c  process_creation  process_termination  README.md 
+/home/zack/projects/school/cs377/lab01/src
+Linux 
+batch-shell> exit 
+[zack@zack src]$  
