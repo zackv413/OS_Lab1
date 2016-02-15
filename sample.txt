@@ -26,8 +26,8 @@ Parent process with process ID 1331 has completed
 batch_scheduler.c
 ---------------------------------------------
 [zack@zack src]$ ./batch_scheduler
-batch-shell> ls pwd uname batch_scheduler
-ls.c		     process_creation.c   process_termination.c batch_scheduler.c  process_creation  process_termination  README.md 
+batch-shell> ls pwd uname 
+batch_scheduler ls.c process_creation.c process_termination.c batch_scheduler.c process_creation  process_termination  README.md 
 /home/zack/projects/school/cs377/lab01/src
 Linux 
 batch-shell> exit 
