@@ -3,6 +3,7 @@
 #include <sys/types.h>
 #include <signal.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 int main()
 {
@@ -19,7 +20,7 @@ int main()
 	if(f != 0)
 	{	
 		pid = getpid();
- 		waitpid(f,NULL,NULL);
+ 		waitpid(f,NULL,0);
 		printf("Parent process with process ID %i has completed\n",pid);
 	}
 	else
@@ -31,7 +32,7 @@ int main()
 		if(f2 != 0)
 		{
 			pid = getpid();
-			waitpid(f2,NULL,NULL);
+			waitpid(f2,NULL,0);
 			printf("Child process with process ID %i has completed\n",pid);			
 			kill(pid,SIGTERM);
 		}
